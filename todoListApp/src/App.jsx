@@ -1,8 +1,8 @@
-
+// src/App.jsx
 import React, { useState } from 'react';
 import './App.css';
 
-
+// Task Component
 const Task = ({ task, toggleComplete, deleteTask }) => {
   return (
     <div className={`task ${task.completed ? 'completed' : ''}`}>
@@ -17,7 +17,7 @@ const Task = ({ task, toggleComplete, deleteTask }) => {
   );
 };
 
-
+// TaskList Component
 const TaskList = ({ tasks, toggleComplete, deleteTask }) => {
   return (
     <div className="task-list">
@@ -33,7 +33,7 @@ const TaskList = ({ tasks, toggleComplete, deleteTask }) => {
   );
 };
 
-
+// TaskInput Component
 const TaskInput = ({ addTask }) => {
   const [text, setText] = useState('');
 
@@ -59,13 +59,14 @@ const TaskInput = ({ addTask }) => {
   );
 };
 
-
+// App Component
 const App = () => {
   const [tasks, setTasks] = useState([]);
-  const [filter, setFilter] = useState('all'); 
+  const [filter, setFilter] = useState('all'); // State for filtering
+
   const addTask = (text) => {
     const newTask = {
-      id: Date.now(), 
+      id: Date.now(), // Unique ID based on timestamp
       text,
       completed: false,
     };
@@ -85,7 +86,7 @@ const App = () => {
   const filteredTasks = tasks.filter(task => {
     if (filter === 'completed') return task.completed;
     if (filter === 'active') return !task.completed;
-    return true; 
+    return true; // 'all' case
   });
 
   return (

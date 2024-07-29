@@ -11,7 +11,7 @@ function App() {
   }
   function addTask() {
     if (newTask.trim() !== "") {
-      setTasks((t) => [...t, newTask]);
+      setTasks((task) => [...task, newTask]);
       setNewTask("");
     }
   }

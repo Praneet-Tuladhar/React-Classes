@@ -1,0 +1,84 @@
+/* src/App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional: Light background for better visibility */
+  font-family: Arial, sans-serif;
+}
+
+h1{
+  color: black;
+}
+.add{
+  border-radius: 100px;
+}
+input{
+  background-color: white;
+  border-radius: 100px;
+  color: black;
+}
+.app {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background: #ffffff; /* Optional: White background for the app container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for a card-like effect */
+  border-radius: 8px; /* Optional: Rounded corners for a nicer look */
+}
+
+.task-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.task-input button {
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: black;
+  border-bottom: 1px solid #ddd;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task button {
+  margin-left: auto;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

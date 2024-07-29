@@ -1,72 +1,85 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  display: flex;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.container {
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
 }
-label, h1, h2{
-  color: black;
+.operation-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
+.button-group{ 
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+#operation-button {
+  min-width: 100%;
+
+}
+input{
+  height: 30px;
+}
+#reset-button {
+  width: 105%;
+  color: red;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  background-color: white;
-  border: 1px solid #ddd; 
-  border-radius: 10px; 
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #fff; 
+  border-radius: 15px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  padding: 20px; 
+  width: 300px; 
+  margin: 0 auto; 
 }
 
-.counter-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.heading {
-  font-size: 2rem;
-  margin-right: 20px;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.counter-value {
-  font-size: 3rem;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.button-group {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+.card {
+  padding: 2em;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.custom-value {
-  display: flex;
-  align-items: center;
-}
-
-input {
-  margin-left: 10px;
-  padding: 5px;
-  font-size: 1rem;
-  width: 70px;
-  text-align: center;
+.read-the-docs {
+  color: #888;
 }

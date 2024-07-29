@@ -1,18 +1,14 @@
-// src/App.jsx
 import React, { useState } from 'react';
-import './App.css'; // Import CSS for styling
+import './App.css'; 
 
 const App = () => {
-  // State hooks for the counter value and custom increment/decrement value
   const [count, setCount] = useState(0);
   const [customValue, setCustomValue] = useState(1);
 
-  // Handlers for button clicks
   const increment = () => setCount(prevCount => prevCount + customValue);
   const decrement = () => setCount(prevCount => prevCount - customValue);
   const reset = () => setCount(0);
 
-  // Handler for custom value changes
   const handleCustomValueChange = (event) => {
     const value = parseInt(event.target.value, 10);
     if (!isNaN(value) && value > 0) {

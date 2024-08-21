@@ -4,9 +4,8 @@ const validateTask = require('./middleware/validateTask');
 const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
-app.use(express.json()); // Use express.json() instead of bodyParser
+app.use(express.json()); 
 
-// Root route
 app.get('/', (req, res) => {
     res.send('Welcome to the Task API');
 });
@@ -56,7 +55,6 @@ app.delete('/tasks/:id', (req, res) => {
     res.status(204).send();
 });
 
-// Error handling middleware
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;

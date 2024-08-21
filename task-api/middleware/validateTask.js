@@ -1,4 +1,3 @@
-// middleware/validateTask.js
 module.exports = (req, res, next) => {
     const { name, status } = req.body;
     if (!name || !status) {
